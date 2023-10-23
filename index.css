@@ -1,0 +1,197 @@
+:root {
+  --standardFont: Arial;
+}
+
+@font-face {
+  font-family: NorseBold;
+  src: url(src/Norse-Bold.otf);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: black;
+}
+
+.container {
+  display: flex;
+}
+
+.container .hero {
+  flex: 1;
+  position: relative;
+}
+.container .hero .hero-logo-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.353);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  top: 30%;
+}
+
+.container .hero .hero-logo-container .hero-text {
+  color: white;
+  font-size: 90px;
+  font-family: NorseBold;
+}
+
+.container .hero .hero-logo-container img {
+  height: 100px;
+}
+.container .hero .photo-credit {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  left: 25%;
+}
+.container .hero .photo-credit em {
+  text-decoration: underline;
+}
+
+.container .hero img {
+  height: 100vh;
+}
+
+.container .form-section {
+  flex: 3;
+  background: rgba(255, 255, 255, 0.958);
+}
+
+.container .form-section .header-container p {
+  width: 500px;
+  font-weight: bold;
+  margin-left: 30px;
+  font-family: var(--standardFont);
+}
+.container .form-section .header-container .first-paragraph {
+  margin-top: 100px;
+}
+.container .form-section .header-container .second-paragraph {
+  margin-bottom: 50px;
+}
+
+.container .form-section .form-container {
+  background: white;
+  box-shadow: 0px 5px rgba(128, 128, 128, 0.101);
+}
+
+.container .form-section .form-container form legend {
+  margin-left: 30px;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  font-weight: bold;
+}
+
+.container .form-section .form-container form .form-row-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .form-section .form-container form .form-row-details .form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.container
+  .form-section
+  .form-container
+  form
+  .form-row-details
+  .form-row
+  p#error-text {
+  margin-left: 30px;
+  margin-top: 0px;
+  font-size: 10px;
+  color: red;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+.container .form-section .form-container form .form-row-details label {
+  margin-left: 30px;
+  font-size: 9px;
+  font-family: var(--standardFont);
+  font-weight: bold;
+}
+
+.container
+  .form-section
+  .form-container
+  form
+  .form-row-details
+  .form-row
+  input {
+  width: 200px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  outline: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 2px;
+}
+
+.container
+  .form-section
+  .form-container
+  form
+  .form-row-details
+  .form-row
+  input#password {
+  margin-bottom: 0px;
+}
+
+.container
+  .form-section
+  .form-container
+  form
+  .form-row-details
+  .form-row
+  input#confirm_password {
+  margin-bottom: 0px;
+}
+
+.container
+  .form-section
+  .form-container
+  form
+  .form-row-details
+  .form-row
+  input:focus {
+  border: 1px solid blue;
+}
+
+.container
+  .form-section
+  .form-container
+  form
+  .form-row-details
+  .form-row
+  input:invalid {
+  border: 1px solid red;
+}
+
+.container .form-section .form-bottom-container {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.container .form-section .form-bottom-container button {
+  background: #596d48;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 170px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.container .form-section .form-bottom-container .alreadyhave-account a {
+  color: #596d48;
+  text-decoration: none;
+}

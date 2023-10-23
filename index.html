@@ -3,9 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Project: Sign Up Form</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div>Project: Sign Up Form</div>
+    <div class="container">
+      <div class="hero">
+        <div class="hero-logo-container">
+          <img src="src/odin-lined.png" alt="ODIN Logo" />
+          <div class="hero-text">ODIN</div>
+        </div>
+        <div class="photo-credit">
+          Photo by <em>Halie West</em> on <em>Unsplash</em>
+        </div>
+        <img src="src/backgroundImage.jpg" alt="Background Image" />
+      </div>
+
+      <div class="form-section">
+        <div class="header-container">
+          <p class="first-paragraph">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. <br />
+            Sign up <em>now</em> to get started.
+          </p>
+          <p class="second-paragraph">You <em>know</em> you want to.</p>
+        </div>
+
+        <div class="form-container">
+          <form
+            action="submit
+              "
+            method="post"
+          >
+            <legend>Let's do this!</legend>
+
+            <div class="form-row-details">
+              <div class="form-row">
+                <label for="first_name">FIRST NAME</label>
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  placeholder="Input your first name"
+                />
+              </div>
+              <div class="form-row">
+                <label for="last_name">LAST NAME</label>
+                <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  placeholder="Input your last name"
+                />
+              </div>
+            </div>
+
+            <div class="form-row-details">
+              <div class="form-row">
+                <label for="email">EMAIL</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Input your email"
+                />
+              </div>
+              <div class="form-row">
+                <label for="phone_number">PHONE NUMBER</label>
+                <input
+                  type="text"
+                  name="phone_number"
+                  id="phone_number"
+                  placeholder="Sample: 09234567890"
+                />
+              </div>
+            </div>
+            <div class="form-row-details">
+              <div class="form-row">
+                <label for="password">PASSWORD</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Input your password"
+                />
+                <p id="error-text">*Passwords do not match</p>
+              </div>
+              <div class="form-row">
+                <label for="confirm_password">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="confirm_password"
+                  name="confirm_password"
+                  placeholder="Confirm your password"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-bottom-container">
+          <button>Create Account</button>
+          <div class="alreadyhave-account">
+            Already have an account? <a href="index/login">Log in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var password = document.getElementById("password");
+      var confirmPassword = document.getElementById("confirm_password");
+      var errorText = document.getElementById("error-text");
+
+      function validatePassword() {
+        if (password.value !== confirmPassword.value) {
+          confirmPassword.style.borderColor = "red";
+          password.style.borderColor = "red";
+          errorText.style.visibility = "visible";
+        } else {
+          confirmPassword.style.borderColor = "";
+          password.style.borderColor = "";
+          errorText.style.visibility = "hidden";
+        }
+      }
+
+      password.onchange = validatePassword;
+      confirmPassword.onkeyup = validatePassword;
+    </script>
   </body>
 </html>
